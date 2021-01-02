@@ -1,0 +1,58 @@
+type Query {
+  nowPlaying(page: Int): MoviePage
+  movieById(id: String): DetailedMovie
+  movieByKeyword(keyword: String, page: Int): MoviePage
+}
+
+interface Movie {
+  id: String!
+  title: String!
+  overview: String
+}
+
+type SummaryMovie implements Movie {
+  id: String!
+  title: String!
+  overview: String
+  backdrop: String
+}
+
+type MoviePage {
+  movieList: [SummaryMovie]
+  minDate: String
+  maxDate: String
+  totalPages: Int
+  totalResults: Int
+}
+
+type DetailedMovie implements Movie {
+  id: String!
+  title: String!
+  overview: String
+  poster: String
+  genres: String
+  releaseDate: String
+  voteAverage: Float
+  voteCount: Int
+  watchProviders: [WatchProvider]
+}
+
+# fragment ProviderFields on Character {
+# }
+
+# enum providerType {
+#   FLATRATE
+#   RENT
+#   BUY
+# }
+
+type WatchProvider {
+  type: String
+  providers: [ProviderDetail]
+}
+
+type ProviderDetail {
+  id: Int!
+  name: String  
+  logoURL: String
+}
