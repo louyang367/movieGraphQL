@@ -8,7 +8,7 @@ import { addResolversToSchema } from '@graphql-tools/schema';
 //   resolvers
 // });
 
-export const schemaWithResolvers = addResolversToSchema({
+export const schema = addResolversToSchema({
   typeDefs,
   resolvers,
 });
