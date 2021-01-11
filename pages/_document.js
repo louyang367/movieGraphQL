@@ -29,8 +29,8 @@ MyDocument.getInitialProps = async (ctx) => {
         originalRenderPage({
           enhanceApp: (App) => (props) => {
             // muiSheets.collect(<App {...props} />);
-            // return styledSheets.collectStyles(<App {...props} />);
-            return styledSheets.collectStyles(muiSheets.collect(<App {...props} />));
+            return styledSheets.collectStyles(<App {...props} />);
+            // return styledSheets.collectStyles(muiSheets.collect(<App {...props} />));
           }
         });
     
