@@ -8,28 +8,14 @@ module.exports = withReactSvg({
   }
 })
 
+// module.exports = {
+//   env: {
+//     TMDB_API_KEY: process.env.TMDB_API_KEY,
+//   },
+// };
+
 module.exports = {
   env: {
-    TMDB_API_KEY: process.env.TMDB_API_KEY,
-  },
-};
-// const withPlugins = require('next-compose-plugins');
-// const withImages = require('next-images')
-
-// const svgrConfig = {
-//     webpack(config) {
-//       config.module.rules.push({
-//         test: /\.svg$/,
-//         issuer: {
-//           test: /\.(js|ts)x?$/,
-//         },
-//         use: ['@svgr/webpack'],
-//       });
-  
-//       return config;
-//     },
-//   };
-
-// module.exports = withPlugins([
-//     [withImages],
-// ], svgrConfig);
+    ROOT: __dirname,
+  }
+}
