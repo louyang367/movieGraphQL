@@ -37,7 +37,7 @@ const Page: NextPage<Props> = ({ topTrending }) => {
 				</title>
 			</Head>
 			<SContainer>
-				<SBanner src="/now-showing-bw.jpg" alt="now showing"/>
+				<SBanner src="/now-showing.jpg" alt="now showing"/>
 				<Carousel autoPlay infiniteLoop>
 					{topTrending?.map((v, i) => (
 						<Fragment key={i}>
