@@ -14,12 +14,12 @@ module.exports = withReactSvg({
 //   },
 // };
 
-module.exports = {
-	webpack(config) {
-		config.resolve.alias["apollo"] = path.join(__dirname, "apollo");
-		return config;
-	},
-};
+// module.exports = {
+// 	webpack(config) {
+// 		config.resolve.alias["apollo"] = path.join(__dirname, "apollo");
+// 		return config;
+// 	},
+// };
 
 module.exports = {
 	webpack(config) {
