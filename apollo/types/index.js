@@ -1,6 +1,7 @@
 import { importSchema } from 'graphql-import';
+import {join} from 'path';
 
-const typeDefs = importSchema("apollo/types/*.graphql");
+const typeDefs = importSchema(join(__dirname, "apollo/types/*.graphql"));
 
 // export default importSchema('apollo/types/*.graphql');
 // export default importSchema('./*.graphql');
