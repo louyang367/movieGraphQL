@@ -1,8 +1,6 @@
 import { importSchema } from 'graphql-import';
-import { join } from 'path';
 
-console.log("***join", join(process.env.ROOT, "apollo/types/*.graphql"));
-const typeDefs = importSchema(join(process.env.ROOT, "apollo/types/*.graphql"));
+const typeDefs = importSchema("apollo/types/*.graphql");
 
 // export default importSchema('apollo/types/*.graphql');
 // export default importSchema('./*.graphql');
