@@ -1,14 +1,14 @@
-// import { makeExecutableSchema } from "graphql-tools";
-import typeDefs from "./types";
+import { makeExecutableSchema } from "graphql-tools";
+import typeDefs from "./types/movie.graphql";
 import resolvers from "./resolvers";
-import { addResolversToSchema } from '@graphql-tools/schema';
+// import { addResolversToSchema } from '@graphql-tools/schema';
 
-// export const schema = makeExecutableSchema({
-//   typeDefs,
-//   resolvers
-// });
-
-export const schema = addResolversToSchema({
+export const schema = makeExecutableSchema({
   typeDefs,
-  resolvers,
+  resolvers
 });
+
+// export const schema = addResolversToSchema({
+//   typeDefs,
+//   resolvers,
+// });

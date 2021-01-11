@@ -1,3 +1,4 @@
+const typeDefs = `
 type Query {
   nowPlaying(page: Int): MoviePage
   topRated(page: Int): MoviePage
@@ -61,3 +62,6 @@ type ProviderDetail {
   name: String  
   logoURL: String
 }
+`;
+
+export default typeDefs;
