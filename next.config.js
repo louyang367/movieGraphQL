@@ -1,12 +1,12 @@
-const withReactSvg = require('next-react-svg')
-const path = require('path')
+const withReactSvg = require("next-react-svg");
+const path = require("path");
 
 module.exports = withReactSvg({
-  include: path.resolve(__dirname, 'components/bookPages/svg'),
-  webpack(config, options) {
-    return config
-  }
-})
+	include: path.resolve(__dirname, "components/bookPages/svg"),
+	webpack(config, options) {
+		return config;
+	},
+});
 
 // module.exports = {
 //   env: {
@@ -15,7 +15,8 @@ module.exports = withReactSvg({
 // };
 
 module.exports = {
-  env: {
-    ROOT: __dirname,
-  }
-}
+	webpack(config) {
+		config.resolve.alias["apollo"] = path.join(__dirname, "apollo");
+		return config;
+	},
+};
