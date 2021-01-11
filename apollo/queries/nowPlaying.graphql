@@ -1,0 +1,16 @@
+query NowPlaying($page: Int) {
+	nowPlaying(page: $page) {
+		movieList {
+			id
+			title
+			overview
+			backdrop
+			releaseDate
+			genreIds
+		}
+		minDate
+		maxDate
+		totalPages
+		totalResults
+	}
+}

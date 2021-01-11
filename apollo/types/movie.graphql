@@ -1,6 +1,9 @@
 type Query {
   nowPlaying(page: Int): MoviePage
+  topRated(page: Int): MoviePage
+  upcoming(page: Int): MoviePage
   movieById(id: String): DetailedMovie
+  movieByTitle(title: String, page: Int): MoviePage
   movieByKeyword(keyword: String, page: Int): MoviePage
 }
 
@@ -15,6 +18,8 @@ type SummaryMovie implements Movie {
   title: String!
   overview: String
   backdrop: String
+  releaseDate: String
+	genreIds: [Int]
 }
 
 type MoviePage {
@@ -40,14 +45,14 @@ type DetailedMovie implements Movie {
 # fragment ProviderFields on Character {
 # }
 
-# enum providerType {
-#   FLATRATE
-#   RENT
-#   BUY
-# }
+enum providerType {
+  Flatrate
+  Rent
+  Buy
+}
 
 type WatchProvider {
-  type: String
+  type: providerType
   providers: [ProviderDetail]
 }
 

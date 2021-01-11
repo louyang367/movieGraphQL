@@ -1,0 +1,14 @@
+query TopRated($page: Int) {
+	topRated(page: $page) {
+		movieList {
+			id
+			title
+			overview
+			backdrop
+			releaseDate
+			genreIds
+		}
+		totalPages
+		totalResults
+	}
+}

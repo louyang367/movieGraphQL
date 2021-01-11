@@ -1,0 +1,16 @@
+query MovieById($id: String) {
+		movieById(id: $id) {
+			id
+			title
+			overview
+			poster
+			genres
+			releaseDate
+			voteAverage
+			voteCount
+			watchProviders {
+				type
+				providers {name logoURL}
+			}
+		}
+	}

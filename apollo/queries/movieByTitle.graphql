@@ -1,0 +1,14 @@
+query MovieByTitle($title: String, $page: Int) {
+	movieByTitle(title: $title, page: $page) {
+		movieList {
+			id
+			title
+			backdrop
+			overview
+			releaseDate
+			genreIds
+		}
+		totalPages
+		totalResults
+	}
+}

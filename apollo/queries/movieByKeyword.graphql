@@ -1,0 +1,14 @@
+	query MovieByKeyword($keyword: String, $page: Int) {
+		movieByKeyword(keyword: $keyword, page: $page) {
+			movieList {
+				id
+				title
+				backdrop
+				overview
+				releaseDate
+				genreIds
+			}
+			totalPages
+			totalResults
+		}
+	}

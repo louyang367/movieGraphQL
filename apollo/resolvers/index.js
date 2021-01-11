@@ -1,5 +1,5 @@
-import games from './games';
+import movies from './movies';
 
 export default {
-  ...games
+  ...movies
 };
