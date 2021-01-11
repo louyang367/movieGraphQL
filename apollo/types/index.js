@@ -1,16 +1,13 @@
-import { importSchema } from 'graphql-import';
-import {join} from 'path';
-
-const typeDefs = importSchema(join(__dirname, "apollo/types/*.graphql"));
-
+// import { importSchema } from 'graphql-import';
 // export default importSchema('apollo/types/*.graphql');
 // export default importSchema('./*.graphql');
+// import {join} from 'path';
+import { loadSchemaSync } from "@graphql-tools/load";
+import {GraphQLFileLoader} from "@graphql-tools/graphql-file-loader";
 
-// import { loadSchemaSync } from "@graphql-tools/load";
-// import {GraphQLFileLoader} from "@graphql-tools/graphql-file-loader";
-// import { join } from 'path';
-// const typeDefs = loadSchemaSync("apollo/types/*.graphql", {
-// 	loaders: [new GraphQLFileLoader()],
-// });
+const typeDefs = loadSchemaSync("./*.graphql", {
+	loaders: [new GraphQLFileLoader()],
+});
+
 console.log("***typeDefs", typeDefs);
 export default typeDefs;
