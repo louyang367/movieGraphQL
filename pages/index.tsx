@@ -22,8 +22,8 @@ const SLegend = styled.p`
 	font-size: 3vw !important;
 `;
 const SBanner = styled.img`
-	width: 80%;
-	height: 7rem;
+	// width: 80%;
+	height: 10rem;
 	flex: 1 1 100%;
 	align-self: center;
 `;
