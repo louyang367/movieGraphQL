@@ -23,7 +23,7 @@ const SLegend = styled.p`
 `;
 const SBanner = styled.img`
 	width: 80%;
-	height: 8rem;
+	height: 7rem;
 	flex: 1 1 100%;
 	align-self: center;
 `;

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import "../styles.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { MOVIE_URL } from "../constants";
 
 // This default export is required in a new `pages/_app.js` file.
@@ -11,10 +11,11 @@ export default function MyApp({ Component, pageProps }) {
 			jssStyles.parentElement.removeChild(jssStyles);
 		}
 	}, []);
+	const initProps = useRef(pageProps);
 	return (
 		<>
 			<title>
-				Movies: search for what's playing, what's trending and where to stream!
+				Movies: what's playing, what's trending and where to stream!
 			</title>
 
 			<Head>
@@ -41,7 +42,7 @@ export default function MyApp({ Component, pageProps }) {
 				<meta name="theme-color" content="#ffffff" />
 			</Head>
 
-			<Component {...pageProps} />
+			<Component {...initProps.current} />
 		</>
 	);
 }
